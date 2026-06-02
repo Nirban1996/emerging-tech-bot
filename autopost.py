@@ -131,4 +131,6 @@ if __name__ == "__main__":
             os.remove(image_file)
             
     except Exception as e:
-        print(f"An error occurred: {e}")
+        import sys
+        print(f"❌ Critical Engine Failure: {e}")
+        sys.exit(1) # This forces GitHub Actions to turn RED when a failure happens

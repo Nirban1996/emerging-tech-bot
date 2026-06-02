@@ -8,10 +8,10 @@ from huggingface_hub import InferenceClient
 # ==========================================
 # 1. YOUR CREDENTIALS (REPLACE THESE)
 # ==========================================
-FB_PAGE_ID = os.environ.get("689551977578358")
-FB_PAGE_TOKEN = os.environ.get("EAAN8rZAAJdtcBRunnXcVbxopSac28Q1hUD3ZAHH7ADZB2OVZBqlVRxRMyO4WhBkdbAlELNZBFJZCJA6E300IpRmpFJQZAmhGE4uds8DO3iCjxLP0CAYRtkHaS5Jzih7mX87JaJkui43B43PnoZA6yMs5PXhjL2L5y2Ge4uz0u8JL0BnK40Mm5MauH1Vm6G9tOky1xOlm33ZAX0nLb4MyZA0FpV")
-GEMINI_API_KEY = os.environ.get("AIzaSyAHDdNQDALPbISuHBP7qIOcIeO-uuc9Ysk")
-HF_API_KEY = os.environ.get("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")
+FB_PAGE_ID = os.environ.get("FB_PAGE_ID")
+FB_PAGE_TOKEN = os.environ.get("FB_PAGE_TOKEN")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+HF_API_KEY = os.environ.get("HF_API_KEY")
 
 # RSS Feed for Tech News
 RSS_URL = "https://techcrunch.com/feed/"

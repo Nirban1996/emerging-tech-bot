@@ -81,8 +81,8 @@ def generate_image(prompt_text, max_retries=3):
             
         except Exception as e:
             print(f"⚠️ Image API Error: {e}")
-            print(f"Retrying in 10 seconds... (Attempt {attempt + 1}/{max_retries})")
-            time.sleep(10)
+            print(f"Retrying in 20 seconds... (Attempt {attempt + 1}/{max_retries})")
+            time.sleep(20)
             
     print("❌ Failed to generate image. Proceeding without one.")
     return None

@@ -48,17 +48,20 @@ def write_facebook_post(news_data, max_retries=3):
     Link: {news_data['link']}
     
     Rules:
-    - Keep it under 4 sentences.
+    - Rewrite the provided text on the link and summary so that the ideas flow the way a human mind works: uneven in some parts, sharp in others, and naturally paced. Break any repetitive patterns where the text feels too uniform or controlled.
+    - The write-up should not be long, but keep it meaningful 
     - Sound enthusiastic and knowledgeable, not robotic.
-    - End with a thought-provoking question to drive comments.
+    - End in a way to provoke drive comments.
     - Include 3 relevant hashtags.
     - DO NOT include the link in the text (Meta suppresses links).
+    - The write-up and structure should be facebook post friendly.
+    - Keep the regular font in the total post, no Bold or Italic.
     """
     
     for attempt in range(max_retries):
         try:
             response = gemini_client.models.generate_content(
-                model="gemini-2.5-flash", 
+                model="gemini-2.5-pro", 
                 contents=prompt
             )
             return response.text.strip()
@@ -75,7 +78,7 @@ def generate_image(prompt_text, max_retries=3):
     """Generates an image using Hugging Face's official InferenceClient."""
     print("🎨 Generating tech image...")
     
-    visual_prompt = f"Futuristic technology concept art related to: {prompt_text}, highly detailed, 8k resolution, cinematic lighting, digital art"
+    visual_prompt = f"Concept art related to: {prompt_text}, highly detailed, 8k resolution, cinematic lighting, digital art"
     
     for attempt in range(max_retries):
         try:

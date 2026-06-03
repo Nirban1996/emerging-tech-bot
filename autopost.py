@@ -61,7 +61,7 @@ def write_facebook_post(news_data, max_retries=3):
     for attempt in range(max_retries):
         try:
             response = gemini_client.models.generate_content(
-                model="gemini-2.5-pro", 
+                model="gemini-2.5-flash", 
                 contents=prompt
             )
             return response.text.strip()

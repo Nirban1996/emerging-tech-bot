@@ -49,6 +49,7 @@ def write_facebook_post(news_data, max_retries=3):
     
     Rules:
     - Rewrite the provided text on the link and summary so that the ideas flow the way a human mind works: uneven in some parts, sharp in others, and naturally paced. Break any repetitive patterns where the text feels too uniform or controlled.
+    - The text should be in Bangla but make sure it sounds natural not translated
     - The write-up should not be long, but keep it meaningful 
     - Sound enthusiastic and knowledgeable, not robotic.
     - End in a way to provoke drive comments.
